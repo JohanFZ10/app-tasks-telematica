@@ -1,7 +1,16 @@
 import React from 'react'
 
-export const MyBoton = () => {
+interface Props {
+  text: string
+}
+export const MyBoton = ({text}:Props) => {
+  const styles = {
+    backgroundColor: 'black',
+    color: 'white',
+    width: '300px',
+    heigth: '20px'
+  }
   return (
-    <div>MyBoton</div>
+    <button style={styles}>{text}</button>
   )
 }
